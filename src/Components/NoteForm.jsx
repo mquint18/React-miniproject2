@@ -58,6 +58,7 @@ function NoteForm() {
                     placeholder= "Type Your Note Here"
                     value={note.message}
                     onChange={handleChange}
+                    multiline={true}
                     />
 
                 <Button

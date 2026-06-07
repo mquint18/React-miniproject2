@@ -1,10 +1,25 @@
 
 function NewInput({
-     name,
+    name,
     value,
     onChange,
-    placeholder
+    placeholder,
+    multiline = false
 }) {
+    if (multiline) {
+        return (
+            <textarea 
+            className="multi-line"
+            name={name} 
+            value={value}
+            onChange={onChange}
+            placeholder={placeholder}
+            />)
+
+
+           
+    }
+
 
     return(
 

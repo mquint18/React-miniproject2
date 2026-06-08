@@ -31,7 +31,9 @@ function NoteForm() {
             message: ""
         })
     }
-
+    function ResetAll() {
+        setNotes([]);
+    }
     function DeleteNote(index){
         const updatedNotes = notes.filter(
             (_, i) => i !==index
@@ -71,6 +73,16 @@ function NoteForm() {
         </section>
 
         <section>
+            <div className="note-counter">
+                <h2> You have {notes.length} notes   </h2>
+                <Button
+                text = "Clear All Notes"
+                onClick={ResetAll}
+                />
+            </div>
+        </section>
+
+        <section>
             <div className="note-cards">
                 {notes.map((card, index) => (
                     <NoteCard
@@ -83,6 +95,7 @@ function NoteForm() {
             </div>
 
         </section>
+       
 
         </>
     )
